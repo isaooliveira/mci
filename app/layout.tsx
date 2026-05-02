@@ -27,6 +27,10 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Máquina de Conteúdo Infinito — Transforme qualquer ideia em roteiro em 5 minutos",
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml", sizes: "any" }],
+    shortcut: "/favicon.svg",
+  },
   description:
     "A ferramenta que transforma qualquer ideia solta em roteiro pronto para gravar em menos de 5 minutos. Funciona no plano gratuito do Claude.",
   openGraph: {

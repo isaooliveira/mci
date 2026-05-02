@@ -34,17 +34,6 @@ export default function OfferSection() {
           O QUE VOCÊ VAI RECEBER
         </motion.h2>
 
-        <motion.h3
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-          className="font-display text-[36px] md:text-[56px] uppercase text-white leading-[0.93] mb-10"
-        >
-          Por{" "}
-          <span style={{ color: "#E16B31" }}>apenas</span>
-        </motion.h3>
-
         <div className="space-y-4 mb-10">
           {items.map((item, i) => (
             <motion.div
@@ -100,7 +89,7 @@ export default function OfferSection() {
           }}
         >
           <p className="font-body text-[16px] mb-3" style={{ color: "#A89990" }}>
-            Tudo isso por:
+            Por apenas:
           </p>
           <motion.p
             initial={{ opacity: 0, scale: 0.9 }}

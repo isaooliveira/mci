@@ -5,6 +5,7 @@ import BenefitsSection from "./components/BenefitsSection";
 import OfferSection from "./components/OfferSection";
 import FaqSection from "./components/FaqSection";
 import FinalCtaSection from "./components/FinalCtaSection";
+import FooterSection from "./components/layout/FooterSection";
 import StickyBar from "./components/layout/StickyBar";
 import NoiseOverlay from "./components/layout/NoiseOverlay";
 import SectionDivider from "./components/ui/SectionDivider";
@@ -26,6 +27,7 @@ export default function Home() {
       <FaqSection />
       <SectionDivider />
       <FinalCtaSection />
+      <FooterSection />
       <StickyBar />
     </main>
   );
