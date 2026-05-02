@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Bebas_Neue, DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://lp.algoritmadigital.com.br";
+
 const bebasNeue = Bebas_Neue({
   weight: "400",
   subsets: ["latin"],
@@ -22,6 +25,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Máquina de Conteúdo Infinito — Transforme qualquer ideia em roteiro em 5 minutos",
   description:
     "A ferramenta que transforma qualquer ideia solta em roteiro pronto para gravar em menos de 5 minutos. Funciona no plano gratuito do Claude.",
