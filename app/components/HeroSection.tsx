@@ -7,15 +7,56 @@ import SectionBadge from "./ui/SectionBadge";
 
 export default function HeroSection() {
   return (
-    <section
-      className="relative px-5 pt-16 pb-20 md:pt-24 md:pb-28"
-    >
-      <div className="max-w-3xl mx-auto">
+    <section className="relative pb-20 md:pb-28 overflow-hidden">
+      {/* Logo — centered, above image */}
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: [0.0, 0.0, 0.2, 1] }}
+        className="flex justify-center pt-5 md:pt-6 px-5"
+      >
+        <Image
+          src="/logo-maquina-conteudo.svg"
+          alt="Máquina de Conteúdo Infinito"
+          width={120}
+          height={92}
+          className="w-[100px] md:w-[120px] h-auto"
+          priority
+        />
+      </motion.div>
+
+      {/* Hero image — full width, blends into bg */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.0, ease: [0.0, 0.0, 0.2, 1], delay: 0.05 }}
+        className="relative w-full mt-2"
+      >
+        <Image
+          src="/bg-webs.webp"
+          alt="Máquina de Conteúdo Infinito — processo completo de criação"
+          width={1920}
+          height={1080}
+          className="w-full h-auto"
+          priority
+        />
+        <div
+          className="absolute inset-x-0 top-0 h-16 pointer-events-none"
+          style={{ background: "linear-gradient(to bottom, #090909, transparent)" }}
+        />
+        <div
+          className="absolute inset-x-0 bottom-0 h-40 pointer-events-none"
+          style={{ background: "linear-gradient(to bottom, transparent, #090909)" }}
+        />
+      </motion.div>
+
+      {/* Text content — centered, below image */}
+      <div className="max-w-3xl mx-auto px-5 mt-2">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.0, 0.0, 0.2, 1] }}
-          className="mb-6 flex justify-center"
+          transition={{ duration: 0.5, ease: [0.0, 0.0, 0.2, 1], delay: 0.2 }}
+          className="mb-4 flex justify-center"
         >
           <SectionBadge text="ACESSO IMEDIATO" />
         </motion.div>
@@ -23,7 +64,7 @@ export default function HeroSection() {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.0, 0.0, 0.2, 1] }}
+          transition={{ duration: 0.5, ease: [0.0, 0.0, 0.2, 1], delay: 0.25 }}
           className="font-display text-[40px] md:text-[64px] leading-[0.93] uppercase text-white mb-8 text-center"
         >
           A ferramenta que transforma uma única ideia solta em{" "}
@@ -31,30 +72,14 @@ export default function HeroSection() {
           roteiro e legendas em menos de 5 minutos
         </motion.h1>
 
-        {/* Hero image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.98 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9, ease: [0.0, 0.0, 0.2, 1], delay: 0.1 }}
-          className="relative w-full aspect-video mb-6"
-        >
-          <Image
-            src="/hero-img4.webp"
-            alt="Máquina de Conteúdo Infinito — processo completo de criação"
-            fill
-            className="object-cover object-center"
-            priority
-          />
-        </motion.div>
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.0, 0.0, 0.2, 1], delay: 0.2 }}
+          transition={{ duration: 0.5, ease: [0.0, 0.0, 0.2, 1], delay: 0.3 }}
           className="mb-8"
         >
           <p
-            className="font-body text-[18px] md:text-[20px] leading-[1.7] mb-5"
+            className="font-body text-[18px] md:text-[20px] leading-[1.7] mb-5 text-center"
             style={{ color: "#A89990" }}
           >
             Crie conteúdos que conectam e retém a audiência, com facilidade,
@@ -89,7 +114,7 @@ export default function HeroSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.0, 0.0, 0.2, 1], delay: 0.3 }}
+          transition={{ duration: 0.5, ease: [0.0, 0.0, 0.2, 1], delay: 0.35 }}
         >
           <CtaButton />
         </motion.div>
@@ -97,7 +122,7 @@ export default function HeroSection() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.0, 0.0, 0.2, 1], delay: 0.35 }}
+          transition={{ duration: 0.5, ease: [0.0, 0.0, 0.2, 1], delay: 0.4 }}
           className="font-body text-center text-[13px] mt-3"
           style={{ color: "#A89990" }}
         >
